@@ -1,0 +1,16 @@
+{
+  "name": "AdventOfCode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2021/AoCInit.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "ItsJustTriz",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
