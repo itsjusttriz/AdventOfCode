@@ -15,7 +15,7 @@
 |--------|-----------|--------------|-------|
 | Day 1  | [x] Part 1<br/>[x] Part 2 | (0.021µs) Part 1 <br/>(0.002µs) Part 2 | Completed |
 | Day 2  | [x] Part 1<br/>[x] Part 2 | (0.016µs) Part 1 <br/>(0.001µs) Part 2 | Completed |
-| Day 3  | [x] Part 1<br/>[x] Part 2 | (0.012µs) Part 1 <br/>(0.051µs) Part 2 | Cheated for Part 2 |
+| Day 3  | [x] Part 1<br/>[x] Part 2 | (0.012µs) Part 1 <br/>(0.051µs) Part 2 | [Cheated](https://github.com/itsjusttriz/AdventOfCode/blob/0ba9757da2eedc35c187db3617db3ac80e87e540/src/2021/Day3.js#L63-L68) for Part 2 |
 | Day 4  | [ ] Part 1<br/>[ ] Part 2 | () Part 1 <br/>() Part 2 | Skipped |
 | Day 5  | [ ] Part 1<br/>[ ] Part 2 | () Part 1 <br/>() Part 2 | Skipped |
 | Day 6  | [x] Part 1<br/>[ ] Part 2 | (0.094µs) Part 1 <br/>() Part 2 | Skipped Part 2|
