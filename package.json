@@ -1,8 +1,8 @@
 {
-  "name": "AdventOfCode",
+  "name": "@itsjusttriz/AdventOfCode",
   "version": "1.0.0",
   "description": "",
-  "main": "2021/AoCInit.js",
+  "main": "src/2021/AoCInit.js",
   "scripts": {
     "start": "node ."
   },
