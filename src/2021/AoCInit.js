@@ -1,11 +1,12 @@
 import { Day01 } from "./Day1.js";
+import { Day02 } from "./Day2.js";
 
 class AoC2021
 {
     constructor()
     {
-        new Day01().solve();
-        //new Day02();
+        // new Day01().solve();
+        new Day02().solve();
         //new Day03();
         //new Day04();
         //new Day05();
