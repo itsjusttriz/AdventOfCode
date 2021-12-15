@@ -1,6 +1,9 @@
 import { Day01 } from "./Day1.js";
 import { Day02 } from "./Day2.js";
 import { Day03 } from "./Day3.js";
+import { Day04 } from "./Day4.js";
+import { Day05 } from "./Day5.js";
+import { Day06 } from "./Day6.js";
 
 class AoC2021
 {
@@ -8,10 +11,10 @@ class AoC2021
     {
         // new Day01().solve();
         // new Day02().solve();
-        new Day03().solve();
-        //new Day04();
-        //new Day05();
-        //new Day06();
+        // new Day03().solve();
+        // new Day04().solve();
+        // new Day05().solve();
+        new Day06().solve();
         //new Day07();
         //new Day08();
         //new Day09();
