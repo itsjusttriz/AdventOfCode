@@ -4,6 +4,7 @@ export class AoCCore
 {
     part = 1;
     timerStart;
+    lineSplit = '\r\n';
 
     constructor(day)
     {
@@ -13,7 +14,7 @@ export class AoCCore
 
     async getFile()
     {
-        const file = await fs.readFile(`./2021/Inputs/day${this.day}.txt`, 'utf-8');
+        const file = await fs.readFile(`./src/2021/Inputs/day${this.day}.txt`, 'utf-8');
         return file;
     }
 
