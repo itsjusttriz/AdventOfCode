@@ -9,7 +9,7 @@ export class Day01 extends AoCCore
 
     async solve()
     {
-        const input = (await this.getFile()).split('\r\n');
+        const input = (await this.getFile()).split(this.lineSplit);
         let count = 0;
 
         // Part 1
