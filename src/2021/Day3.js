@@ -46,6 +46,7 @@ export class Day03 extends AoCCore
 
         this.lap(gamma * epsilon)
 
+        // Part 2
         let oxyNums = [...input],
             co2Nums = [...input];
 
