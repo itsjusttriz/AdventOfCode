@@ -19,7 +19,7 @@
 | Day 4  | ❌ Part 1<br/>❌ Part 2 | ➖<br/>➖ |➖<br/>➖| Skipped |➖|
 | Day 5  | ❌ Part 1<br/>❌ Part 2 | ➖<br/>➖ |➖<br/>➖| Skipped |➖|
 | Day 6  | ✔️ Part 1<br/>✔️ Part 2 | 0.094µs<br/>0.001µs |15th Dec<br/>17th Dec| Completed<br/>Completed | [TurkeyDev](https://github.com/TheTurkeyDev)<br/>[TurkeyDev](https://github.com/TheTurkeyDev) & [47Y](https://github.com/47y)|
-| Day 7  | ⚫ Not Started |
+| Day 7  | ❌ Part 1<br/>❌ Part 2 | ➖<br/>➖ |➖<br/>➖| Skipped |➖|
 | Day 8  | ⚫ Not Started |
 | Day 9  | ⚫ Not Started |
 | Day 10  |⚫ Not Started |
