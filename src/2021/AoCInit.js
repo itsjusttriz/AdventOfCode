@@ -5,6 +5,8 @@ import { Day04 } from "./Day4.js";
 import { Day05 } from "./Day5.js";
 import { Day06 } from "./Day6.js";
 
+import { Day16 } from "./Day16.js";
+
 class AoC2021
 {
     constructor()
