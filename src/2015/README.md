@@ -2,7 +2,7 @@
 
 | Puzzle | Finished? | Process Time | When? | Notes | Help from? |
 |--------|-----------|--------------|-------|-------|------------|
-| Day 1  | ✔️ Part 1<br/>✔️ Part 2 | 0.002µs<br/>0µs |19th Dec 2021| Completed |➖|
+| Day 1  | ✔️ Part 1<br/>✔️ Part 2 | 0.002µs<br/>0µs |19th Dec 2021| Completed |➖<br/>[A_D](https://github.com/A-UNDERSCORE-D)|
 | Day 2  | ⚫ Not Started |
 | Day 3  | ⚫ Not Started |
 | Day 4  | ⚫ Not Started |
