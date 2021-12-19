@@ -6,15 +6,16 @@ export class AoCCore
     timerStart;
     lineSplit = '\r\n';
 
-    constructor(day)
+    constructor(day, year)
     {
         this.timerStart = Date.now();
         this.day = day;
+        this.year = year;
     }
 
     async getFile()
     {
-        const file = await fs.readFile(`./src/2021/Inputs/day${this.day}.txt`, 'utf-8');
+        const file = await fs.readFile(`./src/${this.year}/Inputs/day${this.day}.txt`, 'utf-8');
         return file;
     }
 
