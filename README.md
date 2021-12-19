@@ -13,5 +13,5 @@
 
 | Event | Click to view |
 |-------|---------------
-| 2015  | [View]() |
-| 2021  | [View]() |
+| 2015  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2015/README.md) |
+| 2021  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2021/README.md) |
