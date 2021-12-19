@@ -2,9 +2,11 @@
   "name": "@itsjusttriz/AdventOfCode",
   "version": "1.0.0",
   "description": "",
-  "main": "src/2021/AoCInit.js",
+  "main": "src/AocCore.js",
   "scripts": {
-    "start": "node ."
+    "start": "npm run 2015",
+    "2015": "node src/2015/AoC2015.js",
+    "2021": "node src/2021/AoCInit.js"
   },
   "type": "module",
   "keywords": [],
