@@ -4,7 +4,9 @@ export class Day07 extends AoCCore
 {
     constructor()
     {
-        super('_ex/7')
+        super('07', '2021');
+
+        this.solve()
     }
 
     async solve()
@@ -14,6 +16,8 @@ export class Day07 extends AoCCore
         const list = [];
         for (let c of input[0].split(','))
             list.push(new Crab(parseInt(c)))
+
+        this.lap('SKIPPED')
     }
 }
 

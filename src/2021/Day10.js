@@ -4,7 +4,7 @@ export class Day10 extends AoCCore
 {
     constructor()
     {
-        super('_ex/10', '2021');
+        super('10', '2021');
 
         this.solve()
     }
@@ -27,7 +27,7 @@ export class Day10 extends AoCCore
                     case '{':
                     case '[':
                     case '<':
-                        stack.push(c);
+                        stack.push(l);
                         break;
                     case ')':
                         if (stack.pop() !== '(')

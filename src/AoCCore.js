@@ -22,7 +22,7 @@ export class AoCCore
     lap(answer)
     {
         let timeSpent = (Date.now() - this.timerStart) / 1000;
-        console.log(`Part ${this.part}: ${answer} (${this.timeToString(timeSpent)})`);
+        console.table([[`Day ${this.day}, Part ${this.part}`, answer, `(${this.timeToString(timeSpent)})`]]);
         this.timerStart = Date.now();
         this.part++;
     }

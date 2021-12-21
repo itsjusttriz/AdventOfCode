@@ -4,7 +4,9 @@ export class Day02 extends AoCCore
 {
     constructor()
     {
-        super('2')
+        super('02', '2021');
+
+        this.solve()
     }
 
     async solve()

@@ -4,12 +4,14 @@ export class Day04 extends AoCCore
 {
     constructor()
     {
-        super('4ex')
+        super('04', '2021');
+
+        this.solve();
     }
 
     async solve()
     {
         const input = (await this.getFile()).split(this.lineSplit);
-        // Skipping this for now.
+        this.lap('SKIPPED')
     }
 }
