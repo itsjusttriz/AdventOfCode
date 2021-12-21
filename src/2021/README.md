@@ -11,7 +11,7 @@
 | Day 7  | ❌ Part 1<br/>❌ Part 2 | ➖<br/>➖ |➖<br/>➖| Skipped |➖|
 | Day 8  | ⚫ Not Started |
 | Day 9  | ⚫ Not Started |
-| Day 10  |⚫ Not Started |
+| Day 10 | ❌ Part 1<br/>❌ Part 2 | ➖<br/>➖ |➖<br/>➖| Not Finished |➖|
 | Day 11 | ⚫ Not Started |
 | Day 12 | ⚫ Not Started |
 | Day 13 | ⚫ Not Started |
