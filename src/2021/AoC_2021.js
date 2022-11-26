@@ -1,4 +1,4 @@
-import { Day01 } from "./Day01.js";
+import { Day01 } from "./puzzles/Day01.js";
 import { Day02 } from "./Day02.js";
 import { Day03 } from "./Day03.js";
 import { Day04 } from "./Day04.js";
@@ -12,10 +12,8 @@ import { Day10 } from "./Day10.js";
 import { Day16 } from "./Day16.js";
 
 
-class AoC2021
-{
-    constructor()
-    {
+class AoC2021 {
+    constructor() {
         // new Day01();
         // new Day02();
         // new Day03();

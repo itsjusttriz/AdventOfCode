@@ -1,16 +1,13 @@
-import { AoCCore } from "../AoCCore.js";
+import { AoCCore } from "../../AoCCore.js";
 
-export class Day01 extends AoCCore
-{
-    constructor()
-    {
+export class Day01 extends AoCCore {
+    constructor() {
         super('01', '2021');
 
         this.solve()
     }
 
-    async solve()
-    {
+    async solve() {
         const input = (await this.getFile()).split(this.lineSplit);
         let count = 0;
 
