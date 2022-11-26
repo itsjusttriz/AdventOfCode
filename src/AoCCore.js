@@ -1,38 +1,39 @@
 import { promises as fs } from 'fs';
 
-export class AoCCore
-{
+export class AoCCore {
     part = 1;
     timerStart;
     lineSplit = '\r\n';
 
-    constructor(day, year)
-    {
+    constructor(day, year) {
         this.timerStart = Date.now();
         this.day = day;
         this.year = year;
     }
 
-    async getFile()
-    {
-        const file = await fs.readFile(`./src/${this.year}/Inputs/day${this.day}.txt`, 'utf-8');
+    async getFile() {
+        const file = await fs.readFile(`./src/${this.year}/assets/day${this.day}.txt`, 'utf-8');
         return file;
     }
 
-    lap(answer)
-    {
+    lap(answer) {
         let timeSpent = (Date.now() - this.timerStart) / 1000;
-        console.table([[`Day ${this.day}, Part ${this.part}`, answer, `(${this.timeToString(timeSpent)})`]]);
+        console.dir({
+            Lap: `Day ${this.day}, Part ${this.part}`,
+            answer,
+            Time: this.timeToString(timeSpent)
+        }, {
+            compact: false
+        });
         this.timerStart = Date.now();
         this.part++;
     }
 
-    timeToString(time)
-    {
+    timeToString(time) {
         if (time < 1000)
-            return time + "µs";
+            return time + 'µs';
         if (time < 1000000)
-            return (time / 1000.0) + "ms";
-        return (time / 1000000.0) + "s";
+            return (time / 1000.0) + 'ms';
+        return (time / 1000000.0) + 's';
     }
 }
