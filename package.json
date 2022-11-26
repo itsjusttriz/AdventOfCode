@@ -1,18 +1,19 @@
 {
-  "name": "@itsjusttriz/AdventOfCode",
+  "name": "itsjusttriz-AdventOfCode",
   "version": "1.0.0",
   "description": "",
   "main": "src/AocCore.js",
   "scripts": {
-    "start": "npm run 2015",
-    "2015": "node src/2015/AoC2015.js",
-    "2021": "node src/2021/AoCInit.js"
+    "2015": "node src/2015/AoC_2015.js",
+    "2021": "node src/2021/AoC_2021.js",
+    "2022": "node src/2022/AoC_2022.js",
+    "start": "npm run 2022"
   },
   "type": "module",
   "keywords": [],
-  "author": "ItsJustTriz",
+  "author": "itsjusttriz",
   "license": "ISC",
-  "dependencies": {
-    "fs": "^0.0.1-security"
+  "devDependencies": {
+    "eslint": "^8.28.0"
   }
 }
