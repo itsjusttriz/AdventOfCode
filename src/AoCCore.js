@@ -16,11 +16,11 @@ export class AoCCore {
         return file;
     }
 
-    lap(answer) {
+    lap(Answer) {
         let timeSpent = (Date.now() - this.timerStart) / 1000;
         console.dir({
             Lap: `Day ${this.day}, Part ${this.part}`,
-            answer,
+            Answer,
             Time: this.timeToString(timeSpent)
         }, {
             compact: false
