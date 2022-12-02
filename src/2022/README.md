@@ -1,29 +1,36 @@
 # __Progress__
 
-| Puzzle |  Finished?  | Process Time | When? | Notes | Help from? |
-|:------:|:-----------:|:------------:|:-----:|:-----:|:----------:|
-| Day 01 | ⚫ Not Started |
-| Day 02 | ⚫ Not Started |
-| Day 03 | ⚫ Not Started |
-| Day 04 | ⚫ Not Started |
-| Day 05 | ⚫ Not Started |
-| Day 06 | ⚫ Not Started |
-| Day 07 | ⚫ Not Started |
-| Day 08 | ⚫ Not Started |
-| Day 09 | ⚫ Not Started |
-| Day 10 | ⚫ Not Started |
-| Day 11 | ⚫ Not Started |
-| Day 12 | ⚫ Not Started |
-| Day 13 | ⚫ Not Started |
-| Day 14 | ⚫ Not Started |
-| Day 15 | ⚫ Not Started |
-| Day 16 | ⚫ Not Started |
-| Day 17 | ⚫ Not Started |
-| Day 18 | ⚫ Not Started |
-| Day 19 | ⚫ Not Started |
-| Day 20 | ⚫ Not Started |
-| Day 21 | ⚫ Not Started |
-| Day 22 | ⚫ Not Started |
-| Day 23 | ⚫ Not Started |
-| Day 24 | ⚫ Not Started |
-| Day 25 | ⚫ Not Started |
+| Puzzle | Part 1 | Part 2 | Speed 1 | Speed 2 |  When?  |  Help from?  |
+|:------:|:------:|:------:|:-------:|:-------:|:-------:|:------------:|
+| Day 01 |   ✔️   |   ✔️   | 0.013µs |   0µs   | 1st Dec | TheTurkeyDev |
+| Day 02 |    ⚫   |        |         |         |         |              |
+| Day 03 |    ⚫   |        |         |         |         |              |
+| Day 04 |    ⚫   |        |         |         |         |              |
+| Day 05 |    ⚫   |        |         |         |         |              |
+| Day 06 |    ⚫   |        |         |         |         |              |
+| Day 07 |    ⚫   |        |         |         |         |              |
+| Day 08 |    ⚫   |        |         |         |         |              |
+| Day 09 |    ⚫   |        |         |         |         |              |
+| Day 10 |    ⚫   |        |         |         |         |              |
+| Day 11 |    ⚫   |        |         |         |         |              |
+| Day 12 |    ⚫   |        |         |         |         |              |
+| Day 13 |    ⚫   |        |         |         |         |              |
+| Day 14 |    ⚫   |        |         |         |         |              |
+| Day 15 |    ⚫   |        |         |         |         |              |
+| Day 16 |    ⚫   |        |         |         |         |              |
+| Day 17 |    ⚫   |        |         |         |         |              |
+| Day 18 |    ⚫   |        |         |         |         |              |
+| Day 19 |    ⚫   |        |         |         |         |              |
+| Day 20 |    ⚫   |        |         |         |         |              |
+| Day 21 |    ⚫   |        |         |         |         |              |
+| Day 22 |    ⚫   |        |         |         |         |              |
+| Day 23 |    ⚫   |        |         |         |         |              |
+| Day 24 |    ⚫   |        |         |         |         |              |
+| Day 25 |    ⚫   |        |         |         |         |              |
+
+# Notes
+
+
+# Helpers
+
+- [TheTurkeyDev](https://github.com/TheTurkeyDev)
