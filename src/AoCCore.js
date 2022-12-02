@@ -5,9 +5,9 @@ export class AoCCore {
     timerStart;
     lineSplit = '\r\n';
 
-    constructor(day, year) {
+    constructor({ testing = false, day, year }) {
         this.timerStart = Date.now();
-        this.day = day;
+        this.day = testing ? `_ex/day${day}` : day;
         this.year = year;
     }
 

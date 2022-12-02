@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { AoCCore } from '../../AoCCore.js';
 
-const TESTING = false;
-
 export class Day01 extends AoCCore {
     constructor() {
-        super(`${TESTING ? '_ex/day' : ''}01`, '2022');
+        super({
+            day: '01',
+            year: '2022'
+        });
 
         this.solve();
     }
