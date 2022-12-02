@@ -27,36 +27,57 @@ export class Day02 extends AoCCore {
         const opponent = new Player();
 
         const rounds = input.map(round => round.split(' '));
-        for (const round of rounds) {
-            const [opponentMove, myMove] = round;
+        for (const part1 of rounds) {
+            const [opponentMove, myMove] = part1;
 
             const myScore = pointsMap[myMove];
             const opponentScore = pointsMap[opponentMove];
 
-            switch (true) {
-                case (myScore === 3 && opponentScore === 1):
-                    opponent.add(opponentScore + WIN_NUM);
-                    me.add(myScore);
+            if (myScore === 3 && opponentScore === 1)
+                me.add(myScore);
+            else if (myScore === 1 && opponentScore === 3)
+                me.add(myScore + WIN_NUM);
+            else if (myScore === opponentScore)
+                me.add(myScore + DRAW_NUM);
+            else if (myScore > opponentScore)
+                me.add(myScore + WIN_NUM);
+            else if (myScore < opponentScore)
+                me.add(myScore);
+
+        }
+        this.lap(me.score);
+
+        [me, opponent].forEach(player => player.reset());
+
+        for (const part2 of rounds) {
+            const [opponentMove, myMove] = part2;
+
+            switch (opponentMove) {
+                case 'A':
+                    if (myMove === 'X')
+                        me.add(3);
+                    else if (myMove === 'Y')
+                        me.add(1 + DRAW_NUM);
+                    else if (myMove === 'Z')
+                        me.add(2 + WIN_NUM);
                     break;
 
-                case (myScore === 1 && opponentScore === 3):
-                    me.add(myScore + WIN_NUM);
-                    opponent.add(opponentScore);
+                case 'B':
+                    if (myMove === 'X')
+                        me.add(1);
+                    else if (myMove === 'Y')
+                        me.add(2 + DRAW_NUM);
+                    else if (myMove === 'Z')
+                        me.add(3 + WIN_NUM);
                     break;
 
-                case (myScore === opponentScore):
-                    me.add(myScore + DRAW_NUM);
-                    opponent.add(opponentScore + DRAW_NUM);
-                    break;
-
-                case (myScore > opponentScore):
-                    me.add(myScore + WIN_NUM);
-                    opponent.add(opponentScore);
-                    break;
-
-                case (myScore < opponentScore):
-                    opponent.add(opponentScore + WIN_NUM);
-                    me.add(myScore);
+                case 'C':
+                    if (myMove === 'X')
+                        me.add(2);
+                    else if (myMove === 'Y')
+                        me.add(3 + DRAW_NUM);
+                    else if (myMove === 'Z')
+                        me.add(1 + WIN_NUM);
                     break;
             }
         }
@@ -71,5 +92,9 @@ class Player {
 
     add(num) {
         this.score += num;
+    }
+
+    reset() {
+        this.score = 0;
     }
 }

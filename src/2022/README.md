@@ -3,7 +3,7 @@
 | Puzzle | Part 1 | Part 2 | Speed 1 | Speed 2 |  When?  |  Help from?  |
 |:------:|:------:|:------:|:-------:|:-------:|:-------:|:------------:|
 | Day 01 |   ✔️   |   ✔️   | 0.013µs |   0µs   | 1st Dec | TheTurkeyDev |
-| Day 02 |    ⚫   |        |         |         |         |              |
+| Day 02 |   ✔️   |   ✔️   | 0.006µs | 0.002µs | 2nd Dec | TheTurkeyDev |
 | Day 03 |    ⚫   |        |         |         |         |              |
 | Day 04 |    ⚫   |        |         |         |         |              |
 | Day 05 |    ⚫   |        |         |         |         |              |
@@ -33,4 +33,4 @@
 
 # Helpers
 
-- [TheTurkeyDev](https://github.com/TheTurkeyDev)
+- [TheTurkeyDev](https://github.com/TheTurkeyDev) *(Explains the question further & points out if im doing something stupidly wrong :) )*
