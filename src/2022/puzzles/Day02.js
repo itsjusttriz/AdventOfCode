@@ -28,7 +28,7 @@ export class Day02 extends AoCCore {
 
         const rounds = input.map(round => round.split(' '));
         for (const round of rounds) {
-            const [myMove, opponentMove] = round;
+            const [opponentMove, myMove] = round;
 
             const myScore = pointsMap[myMove];
             const opponentScore = pointsMap[opponentMove];
