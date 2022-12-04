@@ -60,15 +60,3 @@ export class Day04 extends AoCCore {
         this.lap(sum2);
     }
 }
-
-/**
- * Split lines into pairs.
- * 
- * for each pair, populate missing numbers.
- * 
- * filter pair 1, check if pair2 has every item.
- * 
- * same in reverse.
- * 
- * if yes, total++;
- */
