@@ -37,20 +37,27 @@ export class Day04 extends AoCCore {
         }
 
         let sum = 0;
+        let sum2 = 0;
 
-        // Part 1
         for (let i = 0; i < newPairs.length; i++) {
             const [firstHalf, secondHalf] = newPairs[i];
             const side1 = firstHalf.split(' ');
             const side2 = secondHalf.split(' ');
 
+            // Part 1
             const twoHasOne = side1.every(item => side2.includes(item));
             const oneHasTwo = side2.every(item => side1.includes(item));
-
             if (twoHasOne || oneHasTwo)
                 sum++;
+
+            // Part 2
+            const twoOverlaps = side1.some(item => side2.includes(item));
+            const oneOverlaps = side2.some(item => side1.includes(item));
+            if (twoOverlaps || oneOverlaps)
+                sum2++;
         }
         this.lap(sum);
+        this.lap(sum2);
     }
 }
 
