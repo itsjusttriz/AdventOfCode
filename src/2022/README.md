@@ -6,7 +6,7 @@
 | Day 02 |   ✔️   |   ✔️   | 0.005µs |   0µs   |   2nd Dec   | TheTurkeyDev |
 | Day 03 |   ✔️   |   ✔️   | 0.007µs | 0.001µs |   3rd Dec   |       -      |
 | Day 04 |   ✔️   |   ✔️   | 0.046µs |   0µs   |   4th Dec   |       -      |
-| Day 05 |   ✔️   |        | 0.002µs |         | 5th-6th Dec | TheTurkeyDev |
+| Day 05 |   ✔️   |   ✔️   | 0.002µs |   0µs   | 5th-6th Dec | TheTurkeyDev |
 | Day 06 |    ⚫   |        |         |         |             |              |
 | Day 07 |    ⚫   |        |         |         |             |              |
 | Day 08 |    ⚫   |        |         |         |             |              |
