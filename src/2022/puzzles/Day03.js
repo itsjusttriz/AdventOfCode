@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { AoCCore } from '../../AoCCore.js';
 
 export class Day03 extends AoCCore {
