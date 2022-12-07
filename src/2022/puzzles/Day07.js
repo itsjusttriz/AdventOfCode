@@ -6,11 +6,8 @@ export class Day07 extends AoCCore {
         super({ testing: true, day: '07' });
     }
 
-    /**
-     * 
-     * @param {string[]} input 
-     */
-    async solve(input) {
+    async solve() {
+        const input = (await this.getFile()).split(this.lineSplit);
         const root = new Folder();
         root.name = '/';
         let currFolder = root;
@@ -31,8 +28,6 @@ export class Day07 extends AoCCore {
                                         currFolder = n;
                         }
                     }
-
-
                     break;
                 }
                 case 'dir': {
@@ -54,10 +49,11 @@ export class Day07 extends AoCCore {
         }
 
         const finalFold = [];
-        const toCheck = [...root.getSubFolders()];
+        const toCheck = root.getSubFolders();
 
         while (toCheck.length > 0) {
             const fold = toCheck.shift();
+            if (!(fold instanceof Folder)) continue;
             toCheck.push(fold.getSubFolders());
             if (fold.getSize() <= 100000)
                 finalFold.push(fold);
@@ -73,7 +69,7 @@ export class Day07 extends AoCCore {
 class Node {
     name = '';
     parent;
-    getSize = () => { };
+    getSize = () => 1;
 }
 
 class File extends Node {
@@ -102,10 +98,6 @@ class Folder extends Node {
     }
 
     getSubFolders() {
-        let folders = [];
-        for (const n of this.contents)
-            if (n instanceof Folder)
-                folders.push(n);
-        return folders;
+        return this.contents.filter(n => n instanceof Folder);
     }
 }

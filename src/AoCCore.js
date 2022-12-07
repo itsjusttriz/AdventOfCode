@@ -10,16 +10,16 @@ export class AoCCore {
         this.day = testing ? `_ex/day${day}` : day;
         this.year = year;
 
-        this.solve(this.getFile().then(txt => txt.split(this.lineSplit)));
-    }
-
-    async solve() {
-        throw new Error('Running solve() from AocCore file.');
+        this.solve();
     }
 
     async getFile() {
         const file = await fs.readFile(`./src/${this.year}/assets/day${this.day}.txt`, 'utf-8');
         return file;
+    }
+
+    async solve() {
+        throw new Error('Running solve() from AocCore file.');
     }
 
     lap(Answer) {
