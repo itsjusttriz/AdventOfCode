@@ -13,6 +13,18 @@ export class Day04 extends AoCCore {
         let pairs = input.map(item => item.split(','));
         let newPairs = [];
 
+        const findMissingNums = n => {
+            const max = Math.max(...n);
+            const min = Math.min(...n);
+            const missing = [];
+
+            for (let i = min; i <= max; i++) {
+                if (!n.includes(i))
+                    missing.push(i);
+            }
+            return missing;
+        };
+
         for (const pair of pairs) {
             let subPair = [];
             for (const group of pair) {
@@ -46,16 +58,4 @@ export class Day04 extends AoCCore {
         this.lap(sum);
         this.lap(sum2);
     }
-}
-
-function findMissingNums(n) {
-    const max = Math.max(...n);
-    const min = Math.min(...n);
-    const missing = [];
-
-    for (let i = min; i <= max; i++) {
-        if (!n.includes(i))
-            missing.push(i);
-    }
-    return missing;
 }

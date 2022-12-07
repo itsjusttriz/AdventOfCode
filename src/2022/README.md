@@ -8,7 +8,7 @@
 | Day 04 |   ✔️   |   ✔️   | 0.046µs |   0µs   |   4th Dec   |       -      |     -    |
 | Day 05 |   ✔️   |   ✔️   | 0.002µs |   0µs   | 5th-6th Dec | TheTurkeyDev |    ✔️    |
 | Day 06 |   ✔️   |   ✔️   | 0.002µs | 0.002µs |   6th Dec   |       -      |     -    |
-| Day 07 |        |        |         |         |             |              |          |
+| Day 07 |   ✔️   |   ✔️   | 0.004µs |   0µs   |   7th Dec   | TheTurkeyDev |    ✔️    |
 | Day 08 |        |        |         |         |             |              |          |
 | Day 09 |        |        |         |         |             |              |          |
 | Day 10 |        |        |         |         |             |              |          |
@@ -30,6 +30,7 @@
 
 # Notes
 - `Day05`: Cheated from [Turkey's Video](https://www.youtube.com/watch?v=dOct6kpc2n0).
+- `Day07`: Cheated from [Turkey's Video](https://www.youtube.com/watch?v=rYaGods3JKU).
 
 # Helpers
 

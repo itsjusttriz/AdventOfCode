@@ -3,13 +3,17 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day07 extends AoCCore {
     constructor() {
-        super({ testing: true, day: '07' });
+        super({ testing: false, day: '07' });
     }
 
     async solve() {
         const input = (await this.getFile()).split(this.lineSplit);
-        const root = new Folder();
-        root.name = '/';
+
+        const root = {
+            name: '/',
+            contents: [],
+            isFolder: true,
+        };
         let currFolder = root;
 
         for (let i = 1; i < input.length; i++) {
@@ -23,81 +27,64 @@ export class Day07 extends AoCCore {
                             currFolder = currFolder.parent;
                         } else {
                             for (const n of currFolder.contents)
-                                if (n.name === parts[2])
-                                    if (n instanceof Folder)
-                                        currFolder = n;
+                                if (n.name === parts[2] && n.isFolder)
+                                    currFolder = n;
                         }
                     }
                     break;
                 }
                 case 'dir': {
-                    const folder = new Folder();
-                    folder.name = parts[1];
-                    folder.parent = currFolder;
-                    currFolder.contents.push(folder);
+                    currFolder.contents.push({
+                        name: parts[1],
+                        parent: currFolder,
+                        isFolder: true,
+                        contents: [],
+                    });
                     break;
                 }
                 default: {
-                    const file = new File();
-                    file.name = parts[1];
-                    file.size = parseInt(parts[0]);
-                    file.parent = currFolder;
-                    currFolder.contents.push(file);
+                    currFolder.contents.push({
+                        name: parts[1],
+                        parent: currFolder,
+                        isFolder: false,
+                        size: parseInt(parts[0]),
+                    });
                     break;
                 }
             }
         }
 
+        const getSize = (node) => node.isFolder ? node.contents.reduce((prev, curr) => prev + getSize(curr), 0) : node.size;
+
+        // Part 1
         const finalFold = [];
-        const toCheck = root.getSubFolders();
+        let toCheck = [...root.contents.filter(n => n.isFolder)];
 
         while (toCheck.length > 0) {
             const fold = toCheck.shift();
-            if (!(fold instanceof Folder)) continue;
-            toCheck.push(fold.getSubFolders());
-            if (fold.getSize() <= 100000)
+            toCheck.push(...fold.contents.filter(n => n.isFolder));
+            if (getSize(fold) <= 100000)
                 finalFold.push(fold);
         }
 
-        let sum = 0;
-        for (const f of finalFold)
-            sum += f.getSize();
+        let sum = finalFold.reduce((prev, curr) => prev + getSize(curr), 0);
         this.lap(sum);
-    }
-}
 
-class Node {
-    name = '';
-    parent;
-    getSize = () => 1;
-}
+        // Part 2
+        let totSpace = 70000000;
+        let spaceNeeded = 30000000;
+        let free = totSpace - getSize(root);
 
-class File extends Node {
-    size = 0;
+        let sum2 = Number.MAX_VALUE;
+        toCheck = [...root.contents.filter(n => n.isFolder)];
 
-    constructor() {
-        super();
-    }
-
-    getSize() {
-        return this.size;
-    }
-}
-
-class Folder extends Node {
-    contents = [];
-    constructor() {
-        super();
-    }
-
-    getSize() {
-        let size = 0;
-        for (const n of this.contents)
-            size += n.getSize();
-        return size;
-    }
-
-    getSubFolders() {
-        return this.contents.filter(n => n instanceof Folder);
+        while (toCheck.length > 0) {
+            const fold = toCheck.shift();
+            toCheck.push(...fold.contents.filter(n => n.isFolder));
+            const size = getSize(fold);
+            if (free + size > spaceNeeded && size < sum2)
+                sum2 = size;
+        }
+        this.lap(sum2);
     }
 }
