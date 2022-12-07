@@ -2,15 +2,14 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day06 extends AoCCore {
     constructor() {
-        super({
-            day: '06', year: '2022'
-        });
-        this.solve();
+        super({ day: '06' });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit)[0].split('');
-
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
         for (let i = 0; i < (input.length - 4); i++) {
             const selection = input.slice(i, i + 4);
             const unique = new Set(selection);

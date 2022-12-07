@@ -2,13 +2,14 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day02 extends AoCCore {
     constructor() {
-        super({ day: '02', year: '2022' });
-        this.solve();
+        super({ day: '02' });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
-
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
         const WIN_NUM = 6;
         const DRAW_NUM = 3;
         const pointsMap = {

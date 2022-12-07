@@ -1,28 +1,15 @@
 import { AoCCore } from '../../AoCCore.js';
 
-const findMissingNums = n => {
-    const max = Math.max(...n);
-    const min = Math.min(...n);
-    const missing = [];
-
-    for (let i = min; i <= max; i++) {
-        if (!n.includes(i))
-            missing.push(i);
-    }
-    return missing;
-};
-
 export class Day04 extends AoCCore {
     constructor() {
-        super({
-            testing: false,
-            day: '04', year: '2022'
-        });
-        this.solve();
+        super({ day: '04' });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
         let pairs = input.map(item => item.split(','));
         let newPairs = [];
 
@@ -59,4 +46,16 @@ export class Day04 extends AoCCore {
         this.lap(sum);
         this.lap(sum2);
     }
+}
+
+function findMissingNums(n) {
+    const max = Math.max(...n);
+    const min = Math.min(...n);
+    const missing = [];
+
+    for (let i = min; i <= max; i++) {
+        if (!n.includes(i))
+            missing.push(i);
+    }
+    return missing;
 }

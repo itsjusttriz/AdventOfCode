@@ -3,16 +3,15 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day01 extends AoCCore {
     constructor() {
-        super({
-            day: '01',
-            year: '2022'
-        });
-
-        this.solve();
+        super({ day: '01' });
     }
 
-    async solve() {
-        const input = [...(await this.getFile()).split(this.lineSplit), ''];
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
+        input = [...input, ''];
         const list = [];
 
         // Part 1

@@ -2,15 +2,14 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day03 extends AoCCore {
     constructor() {
-        super({
-            day: '03', year: '2022'
-        });
-        this.solve();
+        super({ day: '03' });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
-
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
         let letterMap = {};
         let lowerLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
         let upperLetters = lowerLetters.map(l => l.toUpperCase());

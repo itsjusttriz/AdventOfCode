@@ -5,10 +5,16 @@ export class AoCCore {
     timerStart;
     lineSplit = '\r\n';
 
-    constructor({ testing = false, day, year }) {
+    constructor({ testing = false, day, year = '2022' }) {
         this.timerStart = Date.now();
         this.day = testing ? `_ex/day${day}` : day;
         this.year = year;
+
+        this.solve(this.getFile().then(txt => txt.split(this.lineSplit)));
+    }
+
+    async solve() {
+        throw new Error('Running solve() from AocCore file.');
     }
 
     async getFile() {

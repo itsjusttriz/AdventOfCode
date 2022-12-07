@@ -2,33 +2,28 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day05 extends AoCCore {
     constructor() {
-        super({
-            testing: false,
-            day: '05', year: '2022'
-        });
-        this.solve();
+        super({ day: '05' });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
+    /**
+     * 
+     * @param {string[]} input 
+     */
+    async solve(input) {
         const stacksInput = input.slice(0, 8);
         const instructionsInput = input.slice(10);
 
         const stacks = [];
         const stacksCopy = [];
-        for (let i = 0; i < 9; i++) {
-            stacks.push(new Array());
-            stacksCopy.push(new Array());
-        }
+        for (let i = 0; i < 9; i++)
+            [stacks, stacksCopy].forEach(arr => arr.push(new Array()));
 
         for (const s of stacksInput) {
             let index = 0;
             let index2 = 0;
             while (index2 < s.length) {
-                if (s[index2] !== ' ') {
-                    stacks[index].unshift(s[index2 + 1]);
-                    stacksCopy[index].unshift(s[index2 + 1]);
-                }
+                if (s[index2] !== ' ')
+                    [stacks, stacksCopy].forEach(arr => arr[index].unshift(s[index2 + 1]));
                 index++;
                 index2 += 4;
             }
@@ -43,17 +38,14 @@ export class Day05 extends AoCCore {
             // Part 1
             const fromStack = stacks[from];
             const toStack = stacks[to];
-            for (let j = 0; j < move; j++) {
+            for (let j = 0; j < move; j++)
                 toStack.push(fromStack.pop());
-            }
-
             // Part 2
             const fromCopy = stacksCopy[from];
             const toCopy = stacksCopy[to];
             const moving = [];
-            for (let k = 0; k < move; k++) {
+            for (let k = 0; k < move; k++)
                 moving.push(fromCopy.pop());
-            }
             toCopy.push(...moving.reverse());
         }
 
