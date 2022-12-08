@@ -6,6 +6,7 @@ import { Day04 } from './puzzles/Day04.js';
 import { Day05 } from './puzzles/Day05.js';
 import { Day06 } from './puzzles/Day06.js';
 import { Day07 } from './puzzles/Day07.js';
+import { Day08 } from './puzzles/Day08.js';
 
 class AoC2022 {
     constructor() {
@@ -15,7 +16,8 @@ class AoC2022 {
         // new Day04();
         // new Day05();
         // new Day06();
-        new Day07();
+        // new Day07();
+        new Day08();
     }
 }
 
