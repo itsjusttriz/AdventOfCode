@@ -1,19 +1,17 @@
 {
-  "name": "itsjusttriz-AdventOfCode",
+  "name": "@itsjusttriz/aoc",
   "version": "1.0.0",
-  "description": "",
+  "description": "My attempt at the AdventOfCode Christmas Coding Challenges.",
   "main": "src/AocCore.js",
   "scripts": {
     "2015": "node src/2015/AoC_2015.js",
     "2021": "node src/2021/AoC_2021.js",
     "2022": "node src/2022/AoC_2022.js",
-    "start": "npm run 2022"
+    "2023": "node src/2023/AoC_2023.js",
+    "start": "clear && npm run 2023"
   },
   "type": "module",
   "keywords": [],
   "author": "itsjusttriz",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.28.0"
-  }
+  "license": "ISC"
 }
