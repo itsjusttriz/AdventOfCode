@@ -1,4 +1,4 @@
-# Advent of Code 2021
+# Advent of Code 2023
 
 ## __Opinion__
 
@@ -18,3 +18,4 @@
 | 2015  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2015/README.md) |
 | 2021  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2021/README.md) |
 | 2022  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2022/README.md) |
+| 2023  | [View](https://github.com/itsjusttriz/AdventOfCode/blob/main/src/2023/README.md) |
