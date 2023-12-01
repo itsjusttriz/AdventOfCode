@@ -13,10 +13,8 @@ export class Day05 extends AoCCore {
         const stacksInput = input.slice(0, 8);
         const instructionsInput = input.slice(10);
 
-        const stacks = [];
-        const stacksCopy = [];
-        for (let i = 0; i < 9; i++)
-            [stacks, stacksCopy].forEach(arr => arr.push(new Array()));
+        const COLUMN_COUNT = 9;
+        const [stacks, stacksCopy] = [[],[]].map(() => Array.from({length: COLUMN_COUNT}, () => ([])));
 
         for (const s of stacksInput) {
             let index = 0;
