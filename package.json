@@ -4,7 +4,8 @@
   "description": "My attempt at the AdventOfCode Christmas Coding Challenges.",
   "main": "src/2023/AoC_2023.js",
   "scripts": {
-    "start": "clear && nodemon ."
+    "start": "clear && nodemon .",
+    "prepare-day": "create-day-files.sh"
   },
   "type": "module",
   "keywords": [],
