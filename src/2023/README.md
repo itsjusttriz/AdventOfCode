@@ -1,35 +1,38 @@
-# __Progress__
+# **Progress**
 
-| Puzzle | Part 1 | Part 2 | Speed 1 | Speed 2 |    When?    |  Help from?  | Cheated? |
-|:------:|:------:|:------:|:-------:|:-------:|:-----------:|:------------:|:--------:|
-| Day 01 | ✔️ | ✔️ | 0.004µs | 0.008µs | 1st Dec | TurkeyDev | ✔️ |
-| Day 02 |        |        |         |         |             |              |          |
-| Day 03 |        |        |         |         |             |              |          |
-| Day 04 |        |        |         |         |             |              |          |
-| Day 05 |        |        |         |         |             |              |          |
-| Day 06 |        |        |         |         |             |              |          |
-| Day 07 |        |        |         |         |             |              |          |
-| Day 08 |        |        |         |         |             |              |          |
-| Day 09 |        |        |         |         |             |              |          |
-| Day 10 |        |        |         |         |             |              |          |
-| Day 11 |        |        |         |         |             |              |          |
-| Day 12 |        |        |         |         |             |              |          |
-| Day 13 |        |        |         |         |             |              |          |
-| Day 14 |        |        |         |         |             |              |          |
-| Day 15 |        |        |         |         |             |              |          |
-| Day 16 |        |        |         |         |             |              |          |
-| Day 17 |        |        |         |         |             |              |          |
-| Day 18 |        |        |         |         |             |              |          |
-| Day 19 |        |        |         |         |             |              |          |
-| Day 20 |        |        |         |         |             |              |          |
-| Day 21 |        |        |         |         |             |              |          |
-| Day 22 |        |        |         |         |             |              |          |
-| Day 23 |        |        |         |         |             |              |          |
-| Day 24 |        |        |         |         |             |              |          |
-| Day 25 |        |        |         |         |             |              |          |
+| Puzzle | Part 1 | Part 2 | Speed 1 | Speed 2 |  When?  |                    Help from?                     | Cheated? |
+| :----: | :----: | :----: | :-----: | :-----: | :-----: | :-----------------------------------------------: | :------: |
+| Day 01 |   ✔️   |   ✔️   | 0.004µs | 0.008µs | 1st Dec |   [TurkeyDev](https://github.com/TheTurkeyDev)    |    ✔️    |
+| Day 02 |   ✔️   |        | 0.006µs |         | 2nd Dec | [Era_3037](https://www.reddit.com/user/Era_3037/) |    ✔️    |
+| Day 03 |        |        |         |         |         |                                                   |          |
+| Day 04 |        |        |         |         |         |                                                   |          |
+| Day 05 |        |        |         |         |         |                                                   |          |
+| Day 06 |        |        |         |         |         |                                                   |          |
+| Day 07 |        |        |         |         |         |                                                   |          |
+| Day 08 |        |        |         |         |         |                                                   |          |
+| Day 09 |        |        |         |         |         |                                                   |          |
+| Day 10 |        |        |         |         |         |                                                   |          |
+| Day 11 |        |        |         |         |         |                                                   |          |
+| Day 12 |        |        |         |         |         |                                                   |          |
+| Day 13 |        |        |         |         |         |                                                   |          |
+| Day 14 |        |        |         |         |         |                                                   |          |
+| Day 15 |        |        |         |         |         |                                                   |          |
+| Day 16 |        |        |         |         |         |                                                   |          |
+| Day 17 |        |        |         |         |         |                                                   |          |
+| Day 18 |        |        |         |         |         |                                                   |          |
+| Day 19 |        |        |         |         |         |                                                   |          |
+| Day 20 |        |        |         |         |         |                                                   |          |
+| Day 21 |        |        |         |         |         |                                                   |          |
+| Day 22 |        |        |         |         |         |                                                   |          |
+| Day 23 |        |        |         |         |         |                                                   |          |
+| Day 24 |        |        |         |         |         |                                                   |          |
+| Day 25 |        |        |         |         |         |                                                   |          |
 
 # Notes
-- `Day01`: Cheated from [Turkey's Video](https://www.youtube.com/watch?v=CCV6__zFjSc).
+
+-   `Day01`: [PART 2] Cheated from [Turkey's Video](https://www.youtube.com/watch?v=CCV6__zFjSc).
+-   `Day02`: [PART 1] Cheated from [Era_3037's Pastebin on Reddit](https://pastebin.com/nfjv3Ceh).
 
 # Helpers
-- [TheTurkeyDev](https://github.com/TheTurkeyDev) (*Explains the question further & points out if im doing something stupidly wrong* :smiley:)
+
+-   [TheTurkeyDev](https://github.com/TheTurkeyDev) (_Explains the question further & points out if im doing something stupidly wrong_ :smiley:)
