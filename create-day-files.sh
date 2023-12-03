@@ -16,7 +16,7 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day$day extends AoCCore {
     constructor() {
-        super({ day: '$day', testing: false });
+        super({ day: '$day', testing: true });
     }
 
     /**
