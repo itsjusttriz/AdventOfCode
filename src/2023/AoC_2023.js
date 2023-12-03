@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { Day02 } from "./puzzles/Day02.js";
+import { Day03 } from './puzzles/Day03.js';
 
 class AoC2023 {
     constructor() {
-        new Day02();
+        new Day03();
     }
 }
 
