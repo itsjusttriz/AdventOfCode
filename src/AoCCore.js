@@ -1,25 +1,25 @@
-import { promises as fs } from 'fs';
+import { promises as fs } from "fs";
 
 export class AoCCore {
     part = 1;
     timerStart;
-    lineSplit = '\r\n';
+    lineSplit = "\r\n";
 
-    constructor({ testing = false, day, year = '2023' }) {
+    constructor({ testing = false, day, year = "2023" }) {
         this.timerStart = Date.now();
         this.day = testing ? `_ex/day${day}` : day;
         this.year = year;
 
-        this.solve(this.getFile());
+        this.solve(this.getFile.bind(this));
     }
 
     async getFile() {
-        const file = await fs.readFile(`./src/${this.year}/assets/day${this.day}.txt`, 'utf-8');
+        const file = await fs.readFile(`./src/${this.year}/assets/day${this.day}.txt`, "utf-8");
         return file;
     }
 
     async solve() {
-        throw new Error('Running solve() from AocCore file.');
+        throw new Error("Running solve() from AocCore file.");
     }
 
     lap(Answer) {
@@ -39,8 +39,8 @@ export class AoCCore {
     }
 
     timeToString(time) {
-        if (time < 1000) return time + 'µs';
-        if (time < 1000000) return time / 1000.0 + 'ms';
-        return time / 1000000.0 + 's';
+        if (time < 1000) return time + "µs";
+        if (time < 1000000) return time / 1000.0 + "ms";
+        return time / 1000000.0 + "s";
     }
 }

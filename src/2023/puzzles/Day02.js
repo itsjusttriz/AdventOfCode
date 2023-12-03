@@ -14,15 +14,15 @@ export class Day02 extends AoCCore {
 
     /**
      *
-     * @param {string} input
+     * @param {string} getInput
      */
-    async solve(input) {
-        input = (await input).split(this.lineSplit);
+    async solve(getInput) {
+        getInput = (await getInput()).split(this.lineSplit);
 
-        const resultOne = await this.part1(input);
+        const resultOne = await this.part1(getInput);
         this.lap(resultOne);
 
-        const resultTwo = await this.part2(input);
+        const resultTwo = await this.part2(getInput);
         this.lap(resultTwo);
     }
 

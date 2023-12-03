@@ -8,13 +8,13 @@ export class Day01 extends AoCCore {
 
     /**
      *
-     * @param {string[]} input
+     * @param {string[]} getInput
      */
-    async solve(input) {
-        input = (await input).split(this.lineSplit);
+    async solve(getInput) {
+        getInput = (await getInput()).split(this.lineSplit);
 
         // PART 1
-        const filteredInput = [...input].map((line) => line.split("").filter(Number));
+        const filteredInput = [...getInput].map((line) => line.split("").filter(Number));
         const numArray = [];
 
         for (const list of filteredInput) numArray.push(list[0] + list.at(-1));
@@ -23,7 +23,7 @@ export class Day01 extends AoCCore {
         this.lap(resultOne);
 
         // PART 2 - Credit to TurkeyDev for help with this!
-        const resultTwo = [...input]
+        const resultTwo = [...getInput]
             .map((line) => {
                 const reg = /(\d|one|two|three|four|five|six|seven|eight|nine)/g;
                 const lineCopy = line.slice();
