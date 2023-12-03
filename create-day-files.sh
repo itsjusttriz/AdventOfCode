@@ -26,10 +26,10 @@ export class Day$day extends AoCCore {
     async solve(input) {
         input = (await input).split(this.lineSplit);
 
-        const resultOne = await part1(input);
+        const resultOne = await this.part1(input);
         this.lap(resultOne);
 
-        const resultTwo = await part2(input);
+        const resultTwo = await this.part2(input);
         this.lap(resultTwo);
     }
 
