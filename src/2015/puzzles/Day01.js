@@ -5,8 +5,12 @@ export class Day01 extends AoCCore {
         super({ day: "01", year: "2015", testing: false });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split("");
+    /**
+     *
+     * @param {string} input
+     */
+    async solve(input) {
+        input = input.split("");
 
         // Part 1
         let floor = 0;
