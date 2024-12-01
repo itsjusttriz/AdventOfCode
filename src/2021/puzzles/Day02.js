@@ -1,63 +1,57 @@
 import { AoCCore } from "../AoCCore.js";
 
-export class Day02 extends AoCCore
-{
-    constructor()
-    {
-        super('02', '2021');
-
-        this.solve()
+export class Day02 extends AoCCore {
+    constructor() {
+        super({ day: "02", year: "2021", testing: false });
     }
 
-    async solve()
-    {
-        const input = (await this.getFile()).split(this.lineSplit);
+    /**
+     *
+     * @param {Promise<string>} input
+     */
+    async solve(input) {
+        input = (await input).split(this.lineSplit);
 
         let horizontal = 0;
         let depth = 0;
 
         // Part 1
-        for (let item of input)
-        {
-            const itemSplit = item.split(' ');
-            switch (itemSplit[0])
-            {
-                case 'forward':
+        for (let item of input) {
+            const itemSplit = item.split(" ");
+            switch (itemSplit[0]) {
+                case "forward":
                     horizontal += parseInt(itemSplit[1]);
                     break;
-                case 'up':
+                case "up":
                     depth -= parseInt(itemSplit[1]);
                     break;
-                case 'down':
+                case "down":
                     depth += parseInt(itemSplit[1]);
                     break;
             }
         }
-        this.lap(horizontal * depth)
+        this.lap(horizontal * depth);
 
         // Part 2
         horizontal = 0;
         depth = 0;
         let aim = 0;
 
-        for (let item of input)
-        {
-            const itemSplit = item.split(' ');
-            switch (itemSplit[0])
-            {
-                case 'forward':
+        for (let item of input) {
+            const itemSplit = item.split(" ");
+            switch (itemSplit[0]) {
+                case "forward":
                     horizontal += parseInt(itemSplit[1]);
-                    if (aim >= 1)
-                        depth += (aim * parseInt(itemSplit[1]))
+                    if (aim >= 1) depth += aim * parseInt(itemSplit[1]);
                     break;
-                case 'up':
+                case "up":
                     aim -= parseInt(itemSplit[1]);
                     break;
-                case 'down':
+                case "down":
                     aim += parseInt(itemSplit[1]);
                     break;
             }
         }
-        this.lap(horizontal * depth)
+        this.lap(horizontal * depth);
     }
 }

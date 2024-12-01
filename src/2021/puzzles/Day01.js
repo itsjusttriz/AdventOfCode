@@ -1,20 +1,26 @@
-import { AoCCore } from '../../AoCCore.js';
+import { AoCCore } from "../../AoCCore.js";
 
 export class Day01 extends AoCCore {
     constructor() {
-        super('01', '2021');
-
-        this.solve();
+        super({
+            day: "01",
+            year: "2021",
+            testing: false,
+        });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
+    /**
+     *
+     * @param {Promise<string>} input
+     */
+    async solve(input) {
+        input = (await input).split(this.lineSplit);
+
         let count = 0;
 
         // Part 1
         for (let i = 1; i < input.length; i++)
-            if (parseInt(input[i]) > parseInt(input[i - 1]))
-                count++;
+            if (parseInt(input[i]) > parseInt(input[i - 1])) count++;
         this.lap(count);
 
         // Part 2
@@ -23,9 +29,7 @@ export class Day01 extends AoCCore {
             sums.push(parseInt(input[i]) + parseInt(input[i - 1]) + parseInt(input[i - 2]));
 
         count = 0;
-        for (let i = 1; i < sums.length; i++)
-            if (sums[i] > sums[i - 1])
-                count++;
+        for (let i = 1; i < sums.length; i++) if (sums[i] > sums[i - 1]) count++;
         this.lap(count);
     }
 }

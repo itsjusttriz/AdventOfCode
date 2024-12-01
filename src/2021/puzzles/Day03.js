@@ -1,52 +1,47 @@
 import { AoCCore } from "../AoCCore.js";
 
-export class Day03 extends AoCCore
-{
-    constructor()
-    {
-        super('03', '2021');
-
-        this.solve()
+export class Day03 extends AoCCore {
+    constructor() {
+        super({
+            day: "03",
+            year: "2021",
+            testing: false,
+        });
     }
 
-    async solve()
-    {
-        const input = (await this.getFile()).split(this.lineSplit)
+    /**
+     *
+     * @param {Promise<string>} input
+     */
+    async solve(input) {
+        input = (await input).split(this.lineSplit);
 
         // Part 1
         let ones = [];
         let zeroes = [];
 
-        for (const item of input)
-        {
-            for (let i = 0; i < item.length; i++)
-            {
-                if (item[i] === '1')
-                    typeof ones[i] === 'number' ? ones[i]++ : ones[i] = 1
-                else
-                    typeof zeroes[i] === 'number' ? zeroes[i]++ : zeroes[i] = 1
+        for (const item of input) {
+            for (let i = 0; i < item.length; i++) {
+                if (item[i] === "1") typeof ones[i] === "number" ? ones[i]++ : (ones[i] = 1);
+                else typeof zeroes[i] === "number" ? zeroes[i]++ : (zeroes[i] = 1);
             }
         }
 
-        let gamma = '';
-        let epsilon = '';
-        for (let i = 0; i < ones.length; i++)
-        {
-            if (ones[i] > zeroes[i])
-            {
+        let gamma = "";
+        let epsilon = "";
+        for (let i = 0; i < ones.length; i++) {
+            if (ones[i] > zeroes[i]) {
                 gamma += `1`;
-                epsilon += '0';
+                epsilon += "0";
+            } else {
+                gamma += "0";
+                epsilon += "1";
             }
-            else
-            {
-                gamma += '0'
-                epsilon += '1'
-            }
-        };
+        }
         gamma = parseInt(gamma, 2); // Binary -> Decimal
         epsilon = parseInt(epsilon, 2); // Binary -> Decimal
 
-        this.lap(gamma * epsilon)
+        this.lap(gamma * epsilon);
 
         // Part 2
         let oxyNums = [...input],
@@ -54,63 +49,50 @@ export class Day03 extends AoCCore
 
         let index = 0;
 
-        while (oxyNums.length > 1)
-        {
+        while (oxyNums.length > 1) {
             const nums = this.calculate(oxyNums);
             ones = nums.ones;
             zeroes = nums.zeroes;
 
-            for (let i = oxyNums.length - 1; i >= 0; i--)
-            {
+            for (let i = oxyNums.length - 1; i >= 0; i--) {
                 // Just couldn't figure out the logic so i borrowed from TurkeyDev (https://github.com/TheTurkeyDev/Advent-of-Code-2021/blob/main/src/dev/theturkey/aoc2021/Day03.java#L50-L64)
                 let num = oxyNums[i];
-                if (ones[index] >= zeroes[index] && num[index] === '0')
-                    oxyNums.splice(i, 1);
-                else if (ones[index] < zeroes[index] && num[index] === '1')
-                    oxyNums.splice(i, 1);
+                if (ones[index] >= zeroes[index] && num[index] === "0") oxyNums.splice(i, 1);
+                else if (ones[index] < zeroes[index] && num[index] === "1") oxyNums.splice(i, 1);
             }
-            index++
+            index++;
         }
 
-        index = 0
-        while (co2Nums.length > 1)
-        {
+        index = 0;
+        while (co2Nums.length > 1) {
             const nums = this.calculate(co2Nums);
             ones = nums.ones;
             zeroes = nums.zeroes;
 
-            for (let i = co2Nums.length - 1; i >= 0; i--)
-            {
+            for (let i = co2Nums.length - 1; i >= 0; i--) {
                 let num = co2Nums[i];
-                if (ones[index] >= zeroes[index] && num[index] === '1')
-                    co2Nums.splice(i, 1);
-                else if (ones[index] < zeroes[index] && num[index] === '0')
-                    co2Nums.splice(i, 1);
+                if (ones[index] >= zeroes[index] && num[index] === "1") co2Nums.splice(i, 1);
+                else if (ones[index] < zeroes[index] && num[index] === "0") co2Nums.splice(i, 1);
             }
-            index++
+            index++;
         }
 
         let oxyNum = parseInt(oxyNums[0], 2),
             co2Num = parseInt(co2Nums[0], 2);
-        this.lap(oxyNum * co2Num)
+        this.lap(oxyNum * co2Num);
     }
 
-    calculate(input)
-    {
+    calculate(input) {
         let ones = [];
         let zeroes = [];
 
-        for (const item of input)
-        {
-            for (let i = 0; i < item.length; i++)
-            {
-                if (item[i] === '1')
-                    typeof ones[i] === 'number' ? ones[i]++ : ones[i] = 1
-                else
-                    typeof zeroes[i] === 'number' ? zeroes[i]++ : zeroes[i] = 1
+        for (const item of input) {
+            for (let i = 0; i < item.length; i++) {
+                if (item[i] === "1") typeof ones[i] === "number" ? ones[i]++ : (ones[i] = 1);
+                else typeof zeroes[i] === "number" ? zeroes[i]++ : (zeroes[i] = 1);
             }
         }
 
-        return { ones, zeroes }
+        return { ones, zeroes };
     }
 }

@@ -1,18 +1,17 @@
-import { Day01 } from "./puzzles/Day01.js";
-import { Day02 } from "./Day02.js";
-import { Day03 } from "./Day03.js";
-import { Day04 } from "./Day04.js";
-import { Day05 } from "./Day05.js";
-import { Day06 } from "./Day06.js";
-import { Day07 } from "./Day07.js";
-import { Day08 } from "./Day08.js";
-import { Day09 } from "./Day09.js";
-import { Day10 } from "./Day10.js";
-// 
-import { Day16 } from "./Day16.js";
+// import { Day01 } from "./puzzles/Day01.js";
+// import { Day02 } from "./puzzles/Day02.js";
+// import { Day03 } from "./puzzles/Day03.js";
+// import { Day04 } from "./puzzles/Day04.js";
+// import { Day05 } from "./puzzles/Day05.js";
+// import { Day06 } from "./puzzles/Day06.js";
+// import { Day07 } from "./puzzles/Day07.js";
+// import { Day08 } from "./puzzles/Day08.js";
+// import { Day09 } from "./puzzles/Day09.js";
+import { Day10 } from "./puzzles/Day10.js";
 
+// import { Day16 } from "./puzzles/Day16.js";
 
-class AoC2021 {
+new (class {
     constructor() {
         // new Day01();
         // new Day02();
@@ -40,6 +39,4 @@ class AoC2021 {
         // new Day24();
         // new Day25();
     }
-}
-
-new AoC2021();
+})();

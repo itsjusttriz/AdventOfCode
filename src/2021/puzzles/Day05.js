@@ -1,17 +1,20 @@
 import { AoCCore } from "../AoCCore.js";
 
-export class Day05 extends AoCCore
-{
-    constructor()
-    {
-        super('05', '2021');
-
-        this.solve()
+export class Day05 extends AoCCore {
+    constructor() {
+        super({
+            day: "05",
+            year: "2021",
+            testing: false,
+        });
     }
 
-    async solve()
-    {
-        const input = (await this.getFile()).split(this.lineSplit);
-        this.lap('SKIPPED')
+    /**
+     *
+     * @param {Promise<string>} input
+     */
+    async solve(input) {
+        input = (await input).split(this.lineSplit);
+        throw new Error("Skipped.");
     }
 }
