@@ -7,10 +7,10 @@ export class Day01 extends AoCCore {
 
     /**
      *
-     * @param {string} input
+     * @param {Promise<string>} input
      */
     async solve(input) {
-        input = input.split("");
+        input = (await input).split("");
 
         // Part 1
         let floor = 0;
