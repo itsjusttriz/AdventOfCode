@@ -1,39 +1,46 @@
 /* eslint-disable indent */
-import { AoCCore } from '../../AoCCore.js';
+import { AoCCore } from "../../AoCCore.js";
 
 export class Day07 extends AoCCore {
     constructor() {
-        super({ testing: false, day: '07' });
+        super({
+            day: "07",
+            year: "2022",
+            testing: false,
+        });
     }
 
-    async solve() {
-        const input = (await this.getFile()).split(this.lineSplit);
+    /**
+     *
+     * @param {Promise<string>} input
+     */
+    async solve(input) {
+        input = (await input).split(this.lineSplit);
 
         const root = {
-            name: '/',
+            name: "/",
             contents: [],
             isFolder: true,
         };
         let currFolder = root;
 
         for (let i = 1; i < input.length; i++) {
-            let parts = input[i].split(' ');
+            let parts = input[i].split(" ");
             switch (parts[0]) {
-                case '$': {
-                    if (parts[1] === 'ls') break;
+                case "$": {
+                    if (parts[1] === "ls") break;
 
-                    if (parts[1] === 'cd') {
-                        if (parts[2] === '..') {
+                    if (parts[1] === "cd") {
+                        if (parts[2] === "..") {
                             currFolder = currFolder.parent;
                         } else {
                             for (const n of currFolder.contents)
-                                if (n.name === parts[2] && n.isFolder)
-                                    currFolder = n;
+                                if (n.name === parts[2] && n.isFolder) currFolder = n;
                         }
                     }
                     break;
                 }
-                case 'dir': {
+                case "dir": {
                     currFolder.contents.push({
                         name: parts[1],
                         parent: currFolder,
@@ -54,17 +61,19 @@ export class Day07 extends AoCCore {
             }
         }
 
-        const getSize = (node) => node.isFolder ? node.contents.reduce((prev, curr) => prev + getSize(curr), 0) : node.size;
+        const getSize = (node) =>
+            node.isFolder
+                ? node.contents.reduce((prev, curr) => prev + getSize(curr), 0)
+                : node.size;
 
         // Part 1
         const finalFold = [];
-        let toCheck = [...root.contents.filter(n => n.isFolder)];
+        let toCheck = [...root.contents.filter((n) => n.isFolder)];
 
         while (toCheck.length > 0) {
             const fold = toCheck.shift();
-            toCheck.push(...fold.contents.filter(n => n.isFolder));
-            if (getSize(fold) <= 100000)
-                finalFold.push(fold);
+            toCheck.push(...fold.contents.filter((n) => n.isFolder));
+            if (getSize(fold) <= 100000) finalFold.push(fold);
         }
 
         let sum = finalFold.reduce((prev, curr) => prev + getSize(curr), 0);
@@ -76,14 +85,13 @@ export class Day07 extends AoCCore {
         let free = totSpace - getSize(root);
 
         let sum2 = Number.MAX_VALUE;
-        toCheck = [...root.contents.filter(n => n.isFolder)];
+        toCheck = [...root.contents.filter((n) => n.isFolder)];
 
         while (toCheck.length > 0) {
             const fold = toCheck.shift();
-            toCheck.push(...fold.contents.filter(n => n.isFolder));
+            toCheck.push(...fold.contents.filter((n) => n.isFolder));
             const size = getSize(fold);
-            if (free + size > spaceNeeded && size < sum2)
-                sum2 = size;
+            if (free + size > spaceNeeded && size < sum2) sum2 = size;
         }
         this.lap(sum2);
     }

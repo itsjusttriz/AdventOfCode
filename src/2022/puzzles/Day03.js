@@ -1,20 +1,26 @@
-import { AoCCore } from '../../AoCCore.js';
+import { AoCCore } from "../../AoCCore.js";
 
 export class Day03 extends AoCCore {
     constructor() {
-        super({ day: '03' });
+        super({
+            day: "03",
+            year: "2022",
+            testing: false,
+        });
     }
 
     /**
-     * 
-     * @param {string[]} input 
+     *
+     * @param {Promise<string>} input
      */
     async solve(input) {
-        let letterMap = {};
-        let lowerLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-        let upperLetters = lowerLetters.map(l => l.toUpperCase());
+        input = await input;
 
-        for (let i = 1; i < (lowerLetters.length + upperLetters.length); i++) {
+        let letterMap = {};
+        let lowerLetters = "abcdefghijklmnopqrstuvwxyz".split("");
+        let upperLetters = lowerLetters.map((l) => l.toUpperCase());
+
+        for (let i = 1; i < lowerLetters.length + upperLetters.length; i++) {
             const lower = lowerLetters[i - 1];
             const upper = upperLetters[i - 1];
 
@@ -27,17 +33,23 @@ export class Day03 extends AoCCore {
 
         // Part 1
         for (const rucksack of input) {
-            const side1 = rucksack.slice(0, rucksack.length / 2).split('');
-            const side2 = rucksack.slice(rucksack.length / 2).split('');
+            const side1 = rucksack.slice(0, rucksack.length / 2).split("");
+            const side2 = rucksack.slice(rucksack.length / 2).split("");
 
-            const common = side1.filter(letter => side2.includes(letter))[0];
+            const common = side1.filter((letter) => side2.includes(letter))[0];
             sum += letterMap[common];
         }
 
         // Part 2
         for (let j = 0; j < input.length; j += 3) {
-            const [elf1, elf2, elf3] = [input[j].split(''), input[j + 1].split(''), input[j + 2].split('')];
-            const common = elf1.filter(letter => elf2.includes(letter) && elf3.includes(letter))[0];
+            const [elf1, elf2, elf3] = [
+                input[j].split(""),
+                input[j + 1].split(""),
+                input[j + 2].split(""),
+            ];
+            const common = elf1.filter(
+                (letter) => elf2.includes(letter) && elf3.includes(letter)
+            )[0];
             sum2 += letterMap[common];
         }
         this.lap(sum);

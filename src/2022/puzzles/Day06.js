@@ -1,16 +1,22 @@
-import { AoCCore } from '../../AoCCore.js';
+import { AoCCore } from "../../AoCCore.js";
 
 export class Day06 extends AoCCore {
     constructor() {
-        super({ day: '06' });
+        super({
+            day: "06",
+            year: "2022",
+            testing: false,
+        });
     }
 
     /**
-     * 
-     * @param {string[]} input 
+     *
+     * @param {Promise<string>} input
      */
     async solve(input) {
-        for (let i = 0; i < (input.length - 4); i++) {
+        input = await input;
+
+        for (let i = 0; i < input.length - 4; i++) {
             const selection = input.slice(i, i + 4);
             const unique = new Set(selection);
 
@@ -20,7 +26,7 @@ export class Day06 extends AoCCore {
             }
         }
 
-        for (let j = 0; j < (input.length - 14); j++) {
+        for (let j = 0; j < input.length - 14; j++) {
             const selection = input.slice(j, j + 14);
             const unique = new Set(selection);
 
