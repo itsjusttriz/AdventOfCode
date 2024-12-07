@@ -1,17 +1,17 @@
 {
-  "name": "@itsjusttriz/aoc",
-  "version": "1.0.0",
-  "description": "My attempt at the AdventOfCode Christmas Coding Challenges.",
-  "main": "src/2023/AoC_2023.js",
-  "scripts": {
-    "start": "clear && nodemon .",
-    "prepare-day": "create-day-files.sh"
-  },
-  "type": "module",
-  "keywords": [],
-  "author": "itsjusttriz",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+    "name": "@itsjusttriz/aoc",
+    "version": "1.0.0",
+    "description": "My attempt at the AdventOfCode Christmas Coding Challenges.",
+    "main": "src/2024/AoC_2024.js",
+    "scripts": {
+        "start": "clear && nodemon .",
+        "prepare-day": "create-day-files.sh"
+    },
+    "type": "module",
+    "keywords": [],
+    "author": "itsjusttriz",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
 }

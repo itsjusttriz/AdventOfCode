@@ -7,7 +7,7 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # Access the first command-line argument as a variable
-day="0$1"
+day="$1"
 year="2024"
 
 # Create a file with a JS class setup
@@ -16,26 +16,23 @@ import { AoCCore } from '../../AoCCore.js';
 
 export class Day$day extends AoCCore {
     constructor() {
-        super({ day: '$day', year: '$year', testing: true });
+        super({
+            day: '$day',
+            year: '$year',
+            testing: true
+        });
     }
 
     /**
      *
-     * @param {string[]} input
+     * @param {Promise<string>} input
      */
     async solve(input) {
         input = (await input).split(this.lineSplit);
 
-        const resultOne = await this.part1(input);
-        this.lap(resultOne);
-
-        const resultTwo = await this.part2(input);
-        this.lap(resultTwo);
+        // PART ONE
+        // PART TWO
     }
-
-    async part1(input) {}
-
-    async part2(input) {}
 }
 " > src/$year/puzzles/Day$day.js
 echo "Created File: src/$year/puzzles/Day$day.js"
@@ -49,14 +46,13 @@ echo "Created File: src/$year/assets/day_ex/day$day.txt"
 
 # Modify Init Class
 echo "/* eslint-disable no-unused-vars */
-import { Day$day } from './puzzles/Day$day.js';
+import { Day$day } from \"./puzzles/Day$day.js\";
 
-class AoC$year {
+new (class {
     constructor() {
         new Day$day();
     }
-}
-
-new AoC2023();" > src/$year/AoC_$year.js
+})();
+;" > src/$year/AoC_$year.js
 
 echo "Modified File: src/$year/Aoc_$year.js"
